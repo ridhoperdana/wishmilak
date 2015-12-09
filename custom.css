@@ -1,0 +1,94 @@
+html, body
+{
+	height:100%;
+	font-family: 'Roboto', sans-serif;
+}
+
+#header
+{
+	margin:0;
+	background-color:#303f9f;
+	width:100%;
+}
+
+#kotak_header
+{
+	padding:3%;
+	color:white;
+}
+
+#batang
+{
+	width:10%;
+	background-color:white;
+	height:2px;
+}
+
+#navbar
+{
+	margin-left: 2%;
+	margin-right: 10%;	
+}
+
+#baris_promo
+{
+	/*margin-top:5%;*/
+	height:50%;
+}
+
+#kolom_promo
+{
+	height:100%;
+	overflow:hidden;
+	padding: 2%;
+	float:left;
+}
+
+#foto_promo
+{
+	width:100%;
+	z-index: 3;
+	position: absolute;
+	padding-right:8%;	
+}
+
+#tulisan
+{
+	z-index: 5;
+	background-color: rgb(116, 196, 255);
+	height: 100%;
+	opacity: 0.4;
+	width: 100%;
+	position: relative;
+	top: 50%;
+	padding-left: 5%;
+	padding-top: 2%;
+	/*display:none;*/
+}
+
+#kolom_promo #tulisan:hover
+{
+	opacity:0.8;
+}
+
+#tombol_pesan
+{
+	width: 20%;
+	background-color: rgb(211, 47, 47);
+	padding: 2%;
+	text-align:center;
+	margin: 0 auto;
+	box-shadow: 2px 10px 20px #888888;
+}
+
+#tombol_pesan:hover
+{
+	background-color:#f44336;
+}
+
+#kolom_footer
+{
+	color:white;
+	padding-top:2%;
+	padding-left:5%;
+}
