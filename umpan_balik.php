@@ -33,77 +33,38 @@
     </nav> -->
     <div id="navbar">
       <ul class="nav navbar-nav navbar-right" style="background-color:white;">
-        <li><a href="#">Beranda</a></li>
+        <li><a href="index.php">Beranda</a></li>
         <li><a href="#">Informasi</a></li>
+        <li><a href="#">Umpan Balik</a></li>
       </ul>
     </div>
   </div>
   <div class="container" style="height:auto;">
-    <h3 style="text-align:center;">Detil Penyewaan</h3>
+    <h3 style="text-align:center;">Kirim Umpan Balik</h3>
     <div id="batang" style="background-color:rgb(51, 51, 51);height:2px;margin: 0px auto;width: 20%;opacity:0.5;margin-bottom:3%;"></div>
     <div class="row" style="">
       <div class="col-md-3" style="float:left;"></div>
       <div class="col-md-6" style="padding: 2%;float:left;margin-bottom:5%;border:1px solid grey;">
-         <div id="baris_detil_reservasi" class="row">
-           <div class="col-md-6">
-              <table class="table table-hover">
-                <thead>
-                  <tr>
-                    <th>Nama Penyewa</th>
-                  </tr>
-                  <tr>
-                    <th>Nama Wisma</th>
-                  </tr>
-                  <tr>
-                    <th>Jenis Kamar</th>
-                  </tr>
-                  <tr>
-                    <th>Tanggal Masuk</th>
-                  </tr>
-                  <tr>
-                    <th>Tanggal Keluar</th>
-                  </tr>
-                  <tr>
-                    <th>Fasilitas Tambahan</th>
-                  </tr>
-                </thead>
-              </table>
+         <div id="row_form_penyewaan" class="row">
+           
+           <div class="col-md-12">
+              <form role="form">
+                <div class="form-group">
+                  <label for="nama">Nama Lengkap:</label>
+                  <input type="text" class="form-control" id="email" placeholder="Nama lengkap">
+                </div>
+                <div class="form-group">
+                  <label for="textarea">Isi Umpan Balik:</label>
+                  <textarea class="form-control"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Kirim</button>
+              </form>
            </div>
-           <div class="col-md-6">
-             <table class="table table-hover">
-                <thead>
-                  <tr>
-                    <th id="nama_lengkap">Ridho Perdana</th>
-                  </tr>
-                  <tr>
-                    <th id="nama_wisma">Flamboyan</th>
-                  </tr>
-                  <tr>
-                    <th id="jenis_kamar">VV1</th>
-                  </tr>
-                  <tr>
-                    <th id="tanggal_masuk">12-12-12</th>
-                  </tr>
-                  <tr>
-                    <th id="tanggal_keluar">14-12-12</th>
-                  </tr>
-                  <tr>
-                    <th id="fasilitas">-</th>
-                  </tr>
-                </thead>
-              </table>
-           </div>
+           
          </div>
          
       </div>
       <div class="col-md-3" style="float:left;"></div>
-    </div>
-    <div class="row" style="margin-bottom:2%;">
-      <div class="col-md-12" style="width:100%;">
-        <div style="text-align:center;">
-        <button id="ubah_detil" type="button" class="btn btn-info" style="margin: 0px auto;">Rubah Detil</button>
-        </div>
-      </div>
     </div>
   </div>
   <div class="row" id="footer" style="background-color:#424242;width:100%;margin:0;float:left;padding-bottom:3%;">

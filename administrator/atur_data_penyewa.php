@@ -38,32 +38,17 @@
             <ul class="nav navbar-nav">
               <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+                  
                   <span class="hidden-xs">Kelompok 11</span>
                 </a>
                 <ul class="dropdown-menu">
-                  <!-- User image -->
-                  <li class="user-header">
-                    <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
-                    <p>
-                      Analisa Perancangan Sistem Informasi
-                      <small>Kelas D</small>
-                    </p>
-                  </li>
                   <!-- Menu Footer-->
                   <li class="user-footer">
-                    <div class="pull-left">
-                      <a href="#" class="btn btn-default btn-flat">Profil</a>
-                    </div>
                     <div class="pull-right">
                       <a href="#" class="btn btn-default btn-flat">Keluar</a>
                     </div>
                   </li>
                 </ul>
-              </li>
-              <!-- Control Sidebar Toggle Button -->
-              <li>
-                <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
               </li>
             </ul>
           </div>
@@ -75,13 +60,14 @@
         <section class="sidebar">
           <!-- Sidebar user panel -->
           <div class="user-panel">
-            <div class="pull-left image">
+            <!-- <div class="pull-left image">
               <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
             </div>
             <div class="pull-left info">
               <p>Ridho Perdana</p>
-            </div>
+            </div> -->
           </div>
+          <p style="text-align:center;color:white;">Ridho Perdana</p>
           <!-- /.search form -->
           <!-- sidebar menu: : style can be found in sidebar.less -->
           <ul class="sidebar-menu">
@@ -147,6 +133,7 @@
                     <th>Kamar yang disewa</th>
                     <th>Tanggal masuk</th>
                     <th>Tanggal keluar</th>
+                    <th>Status</th>
                     <th>Aksi</th>
                 </tr>
             </thead>
@@ -157,7 +144,8 @@
                     <td>VV1</td>
                     <td>12/06/2015</td>
                     <td>12/10/2015</td>
-                    <td><button type="button" class="btn btn-primary">Lihat</button><button type="button" class="btn btn-warning">Hapus</button></td>
+                    <td>Disetujui</td>
+                    <td><button id="tombol_lihat" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal_detil">Lihat</button><button id="tombol_hapus" type="button" class="btn btn-warning">Hapus</button></td>
                 </tr>
                 <tr>
                     <td>2</td>
@@ -165,7 +153,8 @@
                     <td>VV2</td>
                     <td>12/06/2015</td>
                     <td>12/10/2015</td>
-                    <td><button type="button" class="btn btn-primary">Lihat</button><button type="button" class="btn btn-warning">Hapus</button></td>
+                    <td>Disetujui</td>
+                    <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal_detil">Lihat</button><button type="button" class="btn btn-warning">Hapus</button></td>
                 </tr>
                 <tr>
                     <td>3</td>
@@ -173,7 +162,8 @@
                     <td>VV2</td>
                     <td>12/06/2015</td>
                     <td>12/10/2015</td>
-                    <td><button type="button" class="btn btn-primary">Lihat</button><button type="button" class="btn btn-warning">Hapus</button></td>
+                    <td>Tidak Disetujui</td>
+                    <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal_detil">Lihat</button><button type="button" class="btn btn-warning">Hapus</button></td>
                 </tr>
               </tbody>
             </table>
@@ -185,6 +175,35 @@
         </div>
         <strong>WISHMILAK.</strong> All rights reserved.
       </footer>
+      <div id="myModal_detil" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Detil Penyewaan</h4>
+          </div>
+          <div id="isi_konfirmasi" class="modal-body">
+            <h4 style="border-bottom: 1px solid grey;">Tambahan</h4>
+              <ul>
+                <li>Kasur</li>
+                <li>TV</li>
+              </ul>
+            <h4 style="border-bottom: 1px solid grey;">Status</h4>
+            <select class="form-control" id="sel1">
+                          <option>DISETUJUI</option>
+                          <option>TIDAK DISETUJUI</option>
+                          </select>
+            <button id="tombol_konfirmasi" type="button" class="btn btn-primary" style="margin: 5%;float:right;">Konfirmasi</button>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
       <!-- Add the sidebar's background. This div must be placed
            immediately after the control sidebar -->
       <div class="control-sidebar-bg"></div>

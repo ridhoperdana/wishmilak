@@ -33,78 +33,77 @@
     </nav> -->
     <div id="navbar">
       <ul class="nav navbar-nav navbar-right" style="background-color:white;">
-        <li><a href="#">Beranda</a></li>
+        <li><a href="index.php">Beranda</a></li>
         <li><a href="#">Informasi</a></li>
       </ul>
     </div>
   </div>
   <div class="container" style="height:auto;">
-    <h3 style="text-align:center;">Detil Penyewaan</h3>
+    <h3 style="text-align:center;">Lihat Kamar</h3>
     <div id="batang" style="background-color:rgb(51, 51, 51);height:2px;margin: 0px auto;width: 20%;opacity:0.5;margin-bottom:3%;"></div>
-    <div class="row" style="">
+    <div id="baris_form_cari_kamar" class="row" style="">
       <div class="col-md-3" style="float:left;"></div>
-      <div class="col-md-6" style="padding: 2%;float:left;margin-bottom:5%;border:1px solid grey;">
-         <div id="baris_detil_reservasi" class="row">
-           <div class="col-md-6">
-              <table class="table table-hover">
-                <thead>
-                  <tr>
-                    <th>Nama Penyewa</th>
-                  </tr>
-                  <tr>
-                    <th>Nama Wisma</th>
-                  </tr>
-                  <tr>
-                    <th>Jenis Kamar</th>
-                  </tr>
-                  <tr>
-                    <th>Tanggal Masuk</th>
-                  </tr>
-                  <tr>
-                    <th>Tanggal Keluar</th>
-                  </tr>
-                  <tr>
-                    <th>Fasilitas Tambahan</th>
-                  </tr>
-                </thead>
-              </table>
-           </div>
-           <div class="col-md-6">
-             <table class="table table-hover">
-                <thead>
-                  <tr>
-                    <th id="nama_lengkap">Ridho Perdana</th>
-                  </tr>
-                  <tr>
-                    <th id="nama_wisma">Flamboyan</th>
-                  </tr>
-                  <tr>
-                    <th id="jenis_kamar">VV1</th>
-                  </tr>
-                  <tr>
-                    <th id="tanggal_masuk">12-12-12</th>
-                  </tr>
-                  <tr>
-                    <th id="tanggal_keluar">14-12-12</th>
-                  </tr>
-                  <tr>
-                    <th id="fasilitas">-</th>
-                  </tr>
-                </thead>
-              </table>
-           </div>
-         </div>
-         
+      <div class="col-md-6" style="background-color: rgb(244, 67, 54);padding: 2%;float:left;margin-bottom:5%;">
+         <form role="form">
+          <div class="form-group" style="float:left;width:50%;padding:1%;">
+          <label for="sel2" style="color:white;">Pilih nama wisma:</label>
+            <select id="nama_wisma" class="form-control" id="sel1">
+              <option>Flamboyan</option>
+              <option>Bougenville</option>
+              <option>3</option>
+              <option>4</option>
+            </select>
+          </div>
+          <div class="form-group" style="float:left;width:50%;padding:1%;">
+          <label for="sel2" style="color:white;">Pilih jenis kamar:</label>
+            <select id="jenis_kamar" class="form-control" id="sel1">
+              <option>VVIP</option>
+              <option>VIP</option>
+              <option>Biasa</option>
+              <option>4</option>
+            </select>
+          </div>
+          <div style="width: 67%;">
+          <button id="cari_kamar" type="button" class="btn btn-primary" style="float: right;width: 50%;margin: 0px auto;">Lihat Kamar</button>
+          </div>
+        </form>
       </div>
       <div class="col-md-3" style="float:left;"></div>
     </div>
-    <div class="row" style="margin-bottom:2%;">
-      <div class="col-md-12" style="width:100%;">
-        <div style="text-align:center;">
-        <button id="ubah_detil" type="button" class="btn btn-info" style="margin: 0px auto;">Rubah Detil</button>
+    <div id="baris_detil_kamar" class="row" style="margin-bottom:5%;">
+    <div class="col-md-3"></div>
+      <div class="col-md-6" style="float:left;">
+        <h4 style="text-align:center;">Kamar VVIP Wisma Flamboyan</h4>
+        <div id="batang" style="background-color:rgb(51, 51, 51);height:2px;margin: 0px auto;width: 20%;opacity:0.5;margin-bottom:3%;"></div>
+        <img id="foto_kamar_dicari" src="foto.jpg" style="width:100%;">
+        <div class="row" style="margin-top:5%;">
+          <div class="col-md-6"><h4>Fasilitas: </h4></div>
+          <div class="col-md-6"><ul>
+            <li>Kasur 2</li>
+            <li>TV 42"</li>
+            <li>Internet Wifi</li>
+          </ul>
+          </div>
         </div>
+        <!-- <div class="row" style="margin-top:5%;">
+          <div class="col-md-6"><h4>Fasilitas Tambahan: </h4></div>
+          <div class="col-md-6"><ul>
+            <li>Kasur 2</li>
+            <li>TV 42"</li>
+            <li>Internet Wifi</li>
+          </ul>
+          </div>
+        </div> -->
       </div>
+    <div class="col-md-3"></div>
     </div>
+
+    <div class="row" style="margin:5%;">
+    <!-- <div id="batang" style="width:100%;background-color:rgb(51, 51, 51);height:2px;opacity:0.5;"></div> -->
+    <div id="tombol_pesan">
+      <a style="color:white;font-size:1.3em;font-weight:500;text-decoration: none;" href="pesan.php">PESAN KAMAR</a>
+    </div>
+  </div>
   </div>
   <div class="row" id="footer" style="background-color:#424242;width:100%;margin:0;float:left;padding-bottom:3%;">
     <div class="col-md-4" id="kolom_footer">

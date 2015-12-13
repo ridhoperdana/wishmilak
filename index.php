@@ -13,9 +13,9 @@
 <body style="margin:0;font-family:'Roboto', sans-serif;height:100%;overflow-x:hidden;">
 <div class="row" id="header" style="margin:0;background-color:#303f9f;box-shadow: 3px 2px 10px #888888;">
   <div id="kotak_header" style="padding:3%;color:white;">
-    <h1>WISHMILAK</h1>
+    <h1 id="judul_website">WISHMILAK</h1>
     <div id="batang" style="width:10%;background-color:white;height:2px;"></div>
-    <h5>Sistem informasi Wisma Institut Teknologi Sepuluh Nopember</h5>
+    <h5 id="keterangan">Sistem informasi Wisma Institut Teknologi Sepuluh Nopember</h5>
   </div>
 <!--   <nav>
     <ul style="display:inline-block;">
@@ -25,7 +25,7 @@
   </nav> -->
   <div id="navbar">
     <ul class="nav navbar-nav navbar-right" style="background-color:white;">
-      <li><a href="#">Beranda</a></li>
+      <li><a href="index.php">Beranda</a></li>
       <li><a href="#">Informasi</a></li>
       <li><a href="#"><form><input type="text" class="form-control" id="usr" placeholder="Kode Penyewaan"></form></a></li>
     </ul>

@@ -38,32 +38,17 @@
             <ul class="nav navbar-nav">
               <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+                  
                   <span class="hidden-xs">Kelompok 11</span>
                 </a>
                 <ul class="dropdown-menu">
-                  <!-- User image -->
-                  <li class="user-header">
-                    <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
-                    <p>
-                      Analisa Perancangan Sistem Informasi
-                      <small>Kelas D</small>
-                    </p>
-                  </li>
                   <!-- Menu Footer-->
                   <li class="user-footer">
-                    <div class="pull-left">
-                      <a href="#" class="btn btn-default btn-flat">Profil</a>
-                    </div>
                     <div class="pull-right">
                       <a href="#" class="btn btn-default btn-flat">Keluar</a>
                     </div>
                   </li>
                 </ul>
-              </li>
-              <!-- Control Sidebar Toggle Button -->
-              <li>
-                <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
               </li>
             </ul>
           </div>
@@ -75,18 +60,19 @@
         <section class="sidebar">
           <!-- Sidebar user panel -->
           <div class="user-panel">
-            <div class="pull-left image">
+            <!-- <div class="pull-left image">
               <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
             </div>
             <div class="pull-left info">
               <p>Ridho Perdana</p>
-            </div>
+            </div> -->
           </div>
+          <p style="text-align:center;color:white;">Ridho Perdana</p>
           <!-- /.search form -->
           <!-- sidebar menu: : style can be found in sidebar.less -->
           <ul class="sidebar-menu">
             <li class="header">MAIN NAVIGATION</li>
-            <li class="treeview">
+            <li id="menu_penyewa" class="treeview">
               <a href="#">
                 <i class="fa fa-users"></i> <span>Penyewa</span> <i class="fa fa-angle-left pull-right"></i>
               </a>
@@ -95,7 +81,7 @@
                 <li><a href="riwayat_penyewa.php"><i class="fa fa-history"></i> Lihat riwayat penyewa</a></li>
               </ul>
             </li>
-            <li class="treeview">
+            <li id="menu_wisma" class="treeview">
               <a href="#">
                 <i class="fa fa-home"></i> <span>Wisma</span> <i class="fa fa-angle-left pull-right"></i>
               </a>
@@ -103,7 +89,7 @@
                 <li><a href="atur_data_wisma.php"><i class="fa fa-database"></i> Atur data wisma</a></li>
               </ul>
             </li>
-            <li class="treeview">
+            <li id="menu_kamar" class="treeview">
               <a href="#">
                 <i class="fa fa-hotel"></i> <span>Kamar</span> <i class="fa fa-angle-left pull-right"></i>
               </a>
@@ -112,7 +98,7 @@
                 <li><a href="index2.html"><i class="fa fa-sticky-note"></i> Lihat catatan penginap</a></li>
               </ul>
             </li>
-            <li class="treeview">
+            <li id="menu_umpanbalik" class="treeview">
               <a href="#">
                 <i class="fa fa-feed"></i> <span>Umpan Balik</span> <i class="fa fa-angle-left pull-right"></i>
               </a>
@@ -174,11 +160,7 @@
     <!-- AdminLTE App -->
     <script src="dist/js/app.min.js"></script>
     <script src="../bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function() {
-        $('#example').DataTable();
-      } );
-    </script>
+
     
   </body>
 </html>
