@@ -25,7 +25,7 @@
 
       <header class="main-header">
         <!-- Logo -->
-        <a href="index2.html" class="logo">
+        <a href="index.php" class="logo">
           WISHMILAK
         </a>
         <!-- Header Navbar: style can be found in header.less -->
@@ -86,7 +86,7 @@
                 <i class="fa fa-home"></i> <span>Wisma</span> <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="active treeview-menu">
-                <li><a href="atur_data_wisma"><i class="fa fa-database"></i> Atur data wisma</a></li>
+                <li><a href="atur_data_wisma.php"><i class="fa fa-database"></i> Atur data wisma</a></li>
               </ul>
             </li>
             <li class="treeview">
@@ -104,6 +104,14 @@
               </a>
               <ul class="treeview-menu">
                 <li class="active"><a href="index.html"><i class="fa fa-smile-o"></i> Atur umpan balik</a></li>
+              </ul>
+            </li>
+            <li id="menu_barang" class="treeview">
+              <a href="#">
+                <i class="fa fa-briefcase"></i> <span>Barang</span> <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li class="active"><a href="atur_data_barang.php"><i class="fa fa-smile-o"></i> Atur data barang</a></li>
               </ul>
             </li>
         </section>
@@ -127,6 +135,44 @@
 
         <!-- Main content -->
         <section class="content">
+        <div class="row" style="padding:3%;">
+          <h3>Wisma</h3>
+          <div class="col-md-12" style="background-color:white;padding:2%;">
+            <table id="example" class="display" width="100%" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>ID_WISMA</th>
+                    <th>NAMA WISMA</th>
+                    <th>AKSI</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>VV001</td>
+                    <td>FLAMBOYAN</td>
+                    <td><button id="lihat_detil" type="button" class="btn btn-primary">Lihat</button><button id="hapus" type="button" class="btn btn-warning">Hapus</button></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>V001</td>
+                    <td>BOUGENVILE</td>
+                    <td><button type="button" class="btn btn-primary">Lihat</button><button type="button" class="btn btn-warning">Hapus</button></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>B001</td>
+                    <td>BARU</td>
+                    <td><button type="button" class="btn btn-primary">Lihat</button><button type="button" class="btn btn-warning">Hapus</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="row" style="padding:3%;">
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal_tambah">Tambah Wisma</button>
+        </div>
           <div class="row" style="padding:3%;">
           <h3>Wisma Flamboyan</h3>
           <div class="col-md-12" style="background-color:white;padding:2%;">
@@ -155,6 +201,27 @@
         </div>
         <strong>WISHMILAK.</strong> All rights reserved.
       </footer>
+      <div id="myModal_tambah" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Tambah Wisma</h4>
+            </div>
+            <div class="modal-body">
+              <h4 style="border-bottom: 1px solid grey;">Nama Wisma</h4>
+              <input id="jumlah_kamar" type="text" class="form-control" id="usr" placeholder="Nama">
+              <button type="button" class="btn btn-info" style="margin: 5%;float:right;">Tambah Wisma</button>
+            </div>
+            <div class="modal-footer">
+              <button id="" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
       <div id="myModal_kosong" class="modal fade" role="dialog">
         <div class="modal-dialog">
 

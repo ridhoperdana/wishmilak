@@ -25,7 +25,7 @@
 
       <header class="main-header">
         <!-- Logo -->
-        <a href="index2.html" class="logo">
+        <a href="index.php" class="logo">
           WISHMILAK
         </a>
         <!-- Header Navbar: style can be found in header.less -->
@@ -104,6 +104,14 @@
               </a>
               <ul class="treeview-menu">
                 <li class="active"><a href="lihat_umpan_balik.php"><i class="fa fa-smile-o"></i> Atur umpan balik</a></li>
+              </ul>
+            </li>
+            <li id="menu_barang" class="treeview">
+              <a href="#">
+                <i class="fa fa-briefcase"></i> <span>Barang</span> <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li class="active"><a href="atur_data_barang.php"><i class="fa fa-smile-o"></i> Atur data barang</a></li>
               </ul>
             </li>
         </section>

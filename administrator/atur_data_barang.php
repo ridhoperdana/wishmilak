@@ -72,7 +72,7 @@
           <!-- sidebar menu: : style can be found in sidebar.less -->
           <ul class="sidebar-menu">
             <li class="header">MAIN NAVIGATION</li>
-            <li id="menu_penyewa" class="treeview">
+            <li class="treeview">
               <a href="#">
                 <i class="fa fa-users"></i> <span>Penyewa</span> <i class="fa fa-angle-left pull-right"></i>
               </a>
@@ -81,15 +81,15 @@
                 <li><a href="riwayat_penyewa.php"><i class="fa fa-history"></i> Lihat riwayat penyewa</a></li>
               </ul>
             </li>
-            <li id="menu_wisma" class="treeview">
+            <li class="treeview">
               <a href="#">
                 <i class="fa fa-home"></i> <span>Wisma</span> <i class="fa fa-angle-left pull-right"></i>
               </a>
-              <ul class="treeview-menu">
+              <ul class="active treeview-menu">
                 <li><a href="atur_data_wisma.php"><i class="fa fa-database"></i> Atur data wisma</a></li>
               </ul>
             </li>
-            <li id="menu_kamar" class="treeview">
+            <li class="treeview">
               <a href="#">
                 <i class="fa fa-hotel"></i> <span>Kamar</span> <i class="fa fa-angle-left pull-right"></i>
               </a>
@@ -98,15 +98,15 @@
                 <li><a href="index2.html"><i class="fa fa-sticky-note"></i> Lihat catatan penginap</a></li>
               </ul>
             </li>
-            <li id="menu_umpanbalik" class="treeview">
+            <li class="treeview">
               <a href="#">
                 <i class="fa fa-feed"></i> <span>Umpan Balik</span> <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li class="active"><a href="index.html"><i class="fa fa-smile-o"></i> Atur umpan balik</a></li>
+                <li class="active"><a href="lihat_umpan_balik.php"><i class="fa fa-smile-o"></i> Atur umpan balik</a></li>
               </ul>
             </li>
-            <li id="menu_barang" class="treeview">
+            <li id="menu_barang" class="active treeview">
               <a href="#">
                 <i class="fa fa-briefcase"></i> <span>Barang</span> <i class="fa fa-angle-left pull-right"></i>
               </a>
@@ -115,6 +115,7 @@
               </ul>
             </li>
         </section>
+
         <!-- /.sidebar -->
       </aside>
       <!-- Content Wrapper. Contains page content -->
@@ -127,12 +128,61 @@
           </h1>
           <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-            <li class="active">Dashboard</li>
+            <li>Dashboard</li>
+            <li>Kamar</li>
+            <li class="active">Atur Data Kamar</li>
           </ol>
         </section>
 
         <!-- Main content -->
         <section class="content">
+        <div id="kolom_wisma" class="row" style="margin:4%;">
+          <div class="col-md-12" style="width:100%;">
+             <form class="form-inline" role="form">
+              <div class="form-group">
+                <label id="select_wisma" for="email">Kategori Barang</label>
+                <select class="form-control" id="sel1">
+                  <option>Kebersihan</option>
+                  <option>Kelengkapan kamar</option>
+                </select>
+              </div>
+              <button type="submit" class="btn btn-default">Cari</button>
+            </form>
+          </div>
+        </div>
+        <table id="example" class="display" width="100%" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>ID_BARANG</th>
+                    <th>NAMA BARANG</th>
+                    <th>JUMLAH</th>
+                    <th>AKSI</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>VV001</td>
+                    <td>Bed Cover</td>
+                    <td>20</td>
+                    <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Update</button><button id="hapus" type="button" class="btn btn-warning">Hapus</button></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>V001</td>
+                    <td>Bantal</td>
+                    <td>2</td>
+                    <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Update</button><button type="button" class="btn btn-warning">Hapus</button></td>
+                </tr>
+              </tbody>
+            </table>
+
+          <div class="row" style="padding:3%;">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal_tambah">Tambah Barang</button>
+          </div>
+
+          
         </section><!-- /.content -->
       </div><!-- /.content-wrapper -->
       <footer class="main-footer">
@@ -145,6 +195,54 @@
            immediately after the control sidebar -->
       <div class="control-sidebar-bg"></div>
     </div><!-- ./wrapper -->
+    <div id="myModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Tambah Barang Bed Cover</h4>
+          </div>
+          <div id="isi_detil_status" class="modal-body">
+              <h4 style="border-bottom: 1px solid grey;">Jumlah</h4>
+              <input id="id_penyewa" type="number" class="form-control" id="usr" value="20">
+              <button id="update_status" type="button" class="btn btn-info" style="margin: 5%;float:right;">Update status</button>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="myModal_tambah" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Tambah Barang</h4>
+          </div>
+          <div class="modal-body">
+            <h4 style="border-bottom: 1px solid grey;">Kategori</h4>
+              <select id="nama_wisma" class="form-control" id="sel1">
+                          <option>Kebersihan</option>
+                          <option>Kelengkapan kamar</option>
+                          </select>
+            <h4 style="border-bottom: 1px solid grey;">Jumlah Barang</h4>
+            <input id="jumlah_kamar" type="number" class="form-control" id="usr" placeholder="Jumlah">
+            <button type="button" class="btn btn-info" style="margin: 5%;float:right;">Tambah barang</button>
+          </div>
+          <div class="modal-footer">
+            <button id="" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
 
     <!-- jQuery 2.1.4 -->
     <script src="plugins/jQuery/jQuery-2.1.4.min.js"></script>
@@ -168,7 +266,11 @@
     <!-- AdminLTE App -->
     <script src="dist/js/app.min.js"></script>
     <script src="../bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
-
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('#example').DataTable();
+      } );
+    </script>
     
   </body>
 </html>

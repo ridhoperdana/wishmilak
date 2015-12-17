@@ -45,19 +45,19 @@
     <div class="row" style="">
       <div class="col-md-3" style="float:left;"></div>
       <div class="col-md-6" style="padding: 2%;float:left;margin-bottom:5%;border:1px solid grey;">
-         <div id="row_form_penyewaan" class="row">
+         <div id="row_form_umpan_balik" class="row">
            
            <div class="col-md-12">
-              <form role="form">
+              <form id="form_umpan_balik" role="form">
                 <div class="form-group">
                   <label for="nama">Nama Lengkap:</label>
-                  <input type="text" class="form-control" id="email" placeholder="Nama lengkap">
+                  <input id="nama_lengkap" type="text" class="form-control" id="email" placeholder="Nama lengkap">
                 </div>
                 <div class="form-group">
                   <label for="textarea">Isi Umpan Balik:</label>
-                  <textarea class="form-control"></textarea>
+                  <textarea id="isi_umpan_balik" class="form-control"></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary">Kirim</button>
+                <button id="tombol_kirim" type="submit" class="btn btn-primary">Kirim</button>
               </form>
            </div>
            
