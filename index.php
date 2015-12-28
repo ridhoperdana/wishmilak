@@ -13,9 +13,9 @@
 <body style="margin:0;font-family:'Roboto', sans-serif;height:100%;overflow-x:hidden;">
 <div class="row" id="header" style="margin:0;background-color:#303f9f;box-shadow: 3px 2px 10px #888888;">
   <div id="kotak_header" style="padding:3%;color:white;">
-    <h1 id="judul_website">WISHMILAK</h1>
+    <h1>WISHMILAK</h1>
     <div id="batang" style="width:10%;background-color:white;height:2px;"></div>
-    <h5 id="keterangan">Sistem informasi Wisma Institut Teknologi Sepuluh Nopember</h5>
+    <h5>Sistem informasi Wisma Institut Teknologi Sepuluh Nopember</h5>
   </div>
 <!--   <nav>
     <ul style="display:inline-block;">
@@ -27,6 +27,7 @@
     <ul class="nav navbar-nav navbar-right" style="background-color:white;">
       <li><a href="index.php">Beranda</a></li>
       <li><a href="#">Informasi</a></li>
+      <li><a href="kamar.php">Kamar</a></li>
       <li><a href="#"><form><input type="text" class="form-control" id="usr" placeholder="Kode Penyewaan"></form></a></li>
     </ul>
   </div>
@@ -56,9 +57,22 @@
     <!-- <div id="batang" style="width:100%;background-color:rgb(51, 51, 51);height:2px;opacity:0.5;"></div> -->
     <div id="tombol_pesan">
       <a style="color:white;font-size:1.3em;font-weight:500;text-decoration: none;" href="pesan.php">PESAN KAMAR</a>
-    </div>
+    </div><br>
+	<div id="tombol_pesan2" onclick="myFunction()">
+      <a style="color:white;font-size:1.3em;font-weight:500;text-decoration: none;">BAYAR KAMAR</a>
+	</div>  
+
+	 <script> 
+	function myFunction() {
+		var x;
+		if (confirm("Pembayaran melalui web hanya untuk pembayaran via transfer ATM. Jika Anda ingin melakukan pembayaran di konter, silahkan langsung datangi konter kami. \nApakah Anda ingin melanjutkan?") == true) {
+			window.location="bayar_id.php"
+		}
+	}
+	
+</script>
+    
   </div>
-  
 </div>
 <div class="row" id="footer" style="background-color:#424242;width:100%;margin:0;float:left;padding-bottom:3%;">
   <div class="col-md-4" id="kolom_footer">

@@ -34,7 +34,9 @@
     <div id="navbar">
       <ul class="nav navbar-nav navbar-right" style="background-color:white;">
         <li><a href="index.php">Beranda</a></li>
-        <li><a href="#">Informasi</a></li>
+      <li><a href="#">Informasi</a></li>
+      <li><a href="kamar.php">Kamar</a></li>
+      <li><a href="#"><form><input type="text" class="form-control" id="usr" placeholder="Kode Penyewaan"></form></a></li>
       </ul>
     </div>
   </div>

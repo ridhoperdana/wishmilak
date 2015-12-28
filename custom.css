@@ -75,7 +75,17 @@ html, body
 {
 	width: 20%;
 	background-color: rgb(211, 47, 47);
-	padding: 2%;
+	padding: 1%;
+	text-align:center;
+	margin: 0 auto;
+	box-shadow: 2px 10px 20px #888888;
+}
+
+#tombol_pesan2
+{
+	width: 20%;
+	background-color: rgb(47, 211, 47);
+	padding: 1%;
 	text-align:center;
 	margin: 0 auto;
 	box-shadow: 2px 10px 20px #888888;

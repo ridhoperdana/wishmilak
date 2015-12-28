@@ -34,7 +34,9 @@
     <div id="navbar">
       <ul class="nav navbar-nav navbar-right" style="background-color:white;">
         <li><a href="index.php">Beranda</a></li>
-        <li><a href="#">Informasi</a></li>
+      <li><a href="#">Informasi</a></li>
+      <li><a href="kamar.php">Kamar</a></li>
+      <li><a href="#"><form><input type="text" class="form-control" id="usr" placeholder="Kode Penyewaan"></form></a></li>
       </ul>
     </div>
   </div>
@@ -118,7 +120,9 @@
     <div class="row" style="margin-bottom:2%;">
       <div class="col-md-12" style="width:100%;">
         <div style="text-align:center;">
+		<a href="detil_reservasi.php">
         <button id="tombol_konfirmasi" type="button" class="btn btn-info" style="margin: 0px auto;">Konfirmasi</button>
+		</a>
         </div>
       </div>
     </div>

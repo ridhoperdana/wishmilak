@@ -34,7 +34,9 @@
     <div id="navbar">
       <ul class="nav navbar-nav navbar-right" style="background-color:white;">
         <li><a href="index.php">Beranda</a></li>
-        <li><a href="#">Informasi</a></li>
+      <li><a href="#">Informasi</a></li>
+      <li><a href="kamar.php">Kamar</a></li>
+      <li><a href="#"><form><input type="text" class="form-control" id="usr" placeholder="Kode Penyewaan"></form></a></li>
       </ul>
     </div>
   </div>
@@ -47,7 +49,7 @@
          <form role="form">
           <div class="form-group" style="float:left;width:50%;padding:1%;">
               <div class='input-group date' id='datetimepicker1'>
-                  <input id="waktu_masuk" type='text' class="form-control" placeholder="Waktu masuk"/>
+                  <input type='text' class="form-control" placeholder="Waktu masuk"/>
                   <span class="input-group-addon">
                       <span class="glyphicon glyphicon-calendar"></span>
                   </span>
@@ -55,7 +57,7 @@
           </div>
           <div class="form-group" style="float:left;width:50%;padding:1%;">
               <div class='input-group date' id='datetimepicker1'>
-                  <input id="waktu_keluar" type='text' class="form-control" placeholder="Waktu keluar"/>
+                  <input type='text' class="form-control" placeholder="Waktu keluar"/>
                   <span class="input-group-addon">
                       <span class="glyphicon glyphicon-calendar"></span>
                   </span>
@@ -63,7 +65,7 @@
           </div>
           <div class="form-group" style="float:left;width:33%;padding:1%;">
           <label for="sel2" style="color:white;">Pilih nama wisma:</label>
-            <select id="nama_wisma" class="form-control" id="sel1">
+            <select class="form-control" id="sel1">
               <option>Flamboyan</option>
               <option>Bougenville</option>
               <option>3</option>
@@ -72,7 +74,7 @@
           </div>
           <div class="form-group" style="float:left;width:33%;padding:1%;">
           <label for="sel2" style="color:white;">Pilih jenis kamar:</label>
-            <select id="jenis_kamar" class="form-control" id="sel1">
+            <select class="form-control" id="sel1">
               <option>VVIP</option>
               <option>VIP</option>
               <option>Biasa</option>
@@ -81,26 +83,29 @@
           </div>
           <div class="form-group" style="float:left;width:33%;padding:1%;">
             <label for="usr" style="color:white;">Jumlah orang:</label>
-            <input id="jumlah_orang" type="text" class="form-control" id="usr" placeholder="Jumlah orang">
+            <input type="text" class="form-control" id="usr" placeholder="Jumlah orang">
           </div>
           <div style="width: 67%;">
-          <button id="tombol_periksa" type="button" class="btn btn-primary" style="float: right;width: 50%;margin: 0px auto;">Periksa wisma</button>
+          <button type="button" class="btn btn-primary" style="float: right;width: 50%;margin: 0px auto;">Periksa wisma</button>
           </div>
         </form>
       </div>
       <div class="col-md-3" style="float:left;"></div>
     </div>
-    <div id="pemberitahuan_sukses" class="row" style="margin-bottom:5%;">
+    <div class="row" style="margin-bottom:5%;">
+      <!-- <div class="col-md-3"></div> -->
       <div class="col-md-12">
         <div style="background-color:#64dd17;padding: 5%;margin:0 auto;text-align:center;width:50%;">
           <h4 style="margin-bottom:5%;">Kamar tersedia, silahkan melanjutkan proses penyewaan.</h4>
           <form role="form" style="">
             <div style="width: 67%;">
-            <button type="button" class="btn btn-primary" style="float: right;width: 50%;margin: 0px auto;background-color:#009688;">Lanjutkan</button>
+			<a href="lanjut_reservasi.php">
+            <button type="button" class="btn btn-primary" style="float: right;width: 50%;margin: 0px auto;background-color:#009688;" href="detil_reservasi.php">Lanjutkan</button>
             </div>
           </form>
         </div>
       </div>
+      <!-- <div class="col-md-3"></div> -->
     </div>
   </div>
   <div class="row" id="footer" style="background-color:#424242;width:100%;margin:0;float:left;padding-bottom:3%;">
